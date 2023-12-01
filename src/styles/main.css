@@ -1,0 +1,393 @@
+html {
+      font-size: 10px;
+}
+
+:root {
+      --container-left-width-45: 45%;
+      --container-left-width-30: 30%;
+}
+
+body {
+      cursor: url('../assets/cursor/yugicursor.png'), default;
+}
+
+button, a, img:hover, button:hover, a:hover {
+      cursor: url('../assets/cursor/yamiyugicursorGLOW.png'), default;
+
+}
+
+.bg-video {
+      width: 100vw;
+      height: 100vh;
+      min-width: 320px;
+      min-height: 640px;
+      position: absolute;
+      z-index: -2;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+}
+
+.bg-video .video {
+      height: inherit;
+}
+
+.bg-video::after {
+      width: inherit;
+      height: inherit;
+      min-width: 320px;
+      min-height: 640px;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.8) 50%,
+      rgba(0,0,0,1) 100% );
+}
+
+.container {
+      width: 100vw;
+      height: 100vh;
+      min-width: 320px;
+      min-height: 640px;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template: 17% 66% 17% / 50% 50%;
+}
+
+.cards-box#computer-cards {
+      padding: 0;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.cards-box#player-cards {
+      padding: 0;
+      grid-column-start: 1;
+      grid-column-end:3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.cards-box > img {
+      height: 90%;
+      min-width: 50px;
+      min-height: 72px;
+      margin: 0.3rem;
+      aspect-ratio: 3/4;
+      object-fit: contain;
+}
+
+.card {
+      transition: transform 0.2s;
+}
+
+.card:hover {
+      transform: scale(1.2);
+}
+
+#next-duel {
+      display: none;
+}
+
+.container__left {
+      width: 100%;
+      padding: 1rem 0;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      display: grid;
+      grid-template-rows: 25% 50% 25%;
+      flex-direction: column;
+      align-items: center;
+      border-width: 1rem;
+}
+
+.container__left .score_box, 
+.container__left .card_details {
+      width: 90%;
+      height: 100%;
+      min-height: 100px;
+      margin: 1rem auto;
+      padding-left: 1rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+}
+
+.frame {
+      border: 3px solid #000;
+      border-radius: 5px;
+}
+
+.score_box span, 
+.card_details p {
+      font-size: 1rem;
+      line-height: 1.8rem;
+      text-shadow: 1px 1px 3px #fcf400;
+}
+
+.container__left .menu_avatar {
+      width: 80%;
+      max-width: 140px;
+      margin: 1rem auto;
+      aspect-ratio: 3/4;
+}
+
+.container__right {
+      width: 100%;
+      height: 100%;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      display: grid;
+      grid-template-rows: 85% 15%;
+      align-items: center;
+      justify-content: center;
+}
+
+.card-infield {
+      width: calc(100vw * 0.5);
+      height: 100%;
+      min-width: 160px;
+      display: grid;
+      grid-template-rows: 40% 20% 40%;
+      align-items: center;
+      justify-content: space-around;
+      justify-items: center;
+}
+
+.card-infield .computer-infield, 
+.card-infield .player-infield {
+      width: 90%;
+      max-width: 110px;
+}
+
+.container__left .menu_avatar,
+.card-infield .computer-infield, 
+.card-infield .player-infield {
+      min-width: 102px;
+      min-height: 136px;
+      border-radius: 8px;
+      aspect-ratio: 3/4;
+      background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-infield .insignia {
+      width: 100%;
+      height: auto;
+      max-width: 70px;
+}
+
+.menu_avatar > img,
+.computer-infield > img, 
+.player-infield > img,
+.insignia > img {
+      width: 100%;
+}
+
+.button__container {
+      width: 100%;
+      height: 100%;
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button__container .rpgui-button {
+      min-height: 60px;
+      height: 80%;
+      width: 40%;
+      min-width: 160px;
+      max-width: 200px;
+      font-size: 1.2rem;
+}
+
+@media screen and (min-width: 550px) {
+
+      .container {
+            grid-template: 25% 50% 25% / 40% 60%;
+      }
+
+      .cards-box#computer-cards {
+            grid-column-start: 2;
+      }
+      
+      .cards-box#player-cards {
+            grid-column-start: 2;
+      }
+
+      .cards-box > img {
+            height: 85%;
+            min-width: 56px;
+            min-height: 80px;
+      }
+      
+      .container__left {
+            grid-row-start: 1;
+            grid-row-end: 4;
+      }
+
+      .score_box span, .card_details p {
+            font-size: 1.4rem;
+            line-height: 3rem;
+      }
+
+      .container__left .menu_avatar {
+            width: 80%;
+            min-width: 130px;
+            min-height: 173px;
+            max-width: 220px;
+      }
+      
+      .menu_avatar > img {
+            width: 100%;
+      }
+
+      .card-infield {
+            grid-template-rows: unset;
+            grid-template-columns: 40% 20% 40%;
+            width: calc(100vw * 0.6);
+      }
+
+      .card-infield .computer-infield, 
+      .card-infield .player-infield {
+            width: 80%;
+            min-width: 120px;
+            min-height: 160px;
+            max-width: 200px;
+      }
+
+      .card-infield .insignia {
+            max-width: 120px;
+      }
+
+      .button__container {
+            min-height: 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+      }
+
+      .button__container .rpgui-button {
+            font-size: 1.4rem;
+      }
+     
+}
+
+@media screen 
+and (min-height: 980px) 
+and (min-width: 1280px) {
+
+      .container__left .menu_avatar {
+            width: 90%;
+            min-width: 205px;
+            min-height: 273px;
+            max-width: 350px;
+      }
+     
+      .card-infield {
+            grid-template-rows: unset;
+            grid-template-columns: 40% 20% 40%;
+            width: calc(100vw * 0.6);
+      }
+
+      .card-infield .computer-infield, 
+      .card-infield .player-infield {
+            width: 80%;
+            min-width: 120px;
+            min-height: 160px;
+            max-width: 320px;
+      }
+
+      .card-infield .insignia {
+            max-width: 130px;
+      }
+
+}
+
+@media screen 
+and (min-width: 980px) 
+and (min-height: 1300px) 
+and (orientation: portrait) {
+
+      .container {
+            grid-template: 17% 66% 17% / 40% 60%;
+      }
+
+      .cards-box#computer-cards {
+            grid-column-start: 1;
+      }
+
+      .cards-box#player-cards {
+            grid-column-start: 1;
+      }
+
+      .cards-box > img {
+            height: 80%;
+            min-width: 56px;
+            min-height: 80px;
+      }
+      
+      .container__left {
+            grid-row-start: 2;
+            grid-row-end: 3;
+      }
+
+      .score_box span, .card_details p {
+            font-size: 2.2rem;
+            line-height: 5rem;
+      }
+      
+      .container__left .menu_avatar {
+            width: 70%;
+            min-width: 205px;
+            min-height: 273px;
+            max-width: 280px;
+      }
+      
+      .card-infield {
+            grid-template-columns: unset;
+            grid-template-rows: 40% 20% 40%;
+            width: calc(100vw * 0.6);
+      }
+
+      .card-infield .computer-infield, 
+      .card-infield .player-infield {
+            width: 80%;
+            min-width: 250px;
+            min-height: 333px;
+            max-width: 300px;
+      }
+
+      .card-infield .insignia {
+            max-width: 150px;
+      }
+
+      .button__container .rpgui-button {
+            height: 70%;
+            max-width: 400px;
+            font-size: 2rem;
+            min-height: 60px;
+      }
+
+}
