@@ -3,6 +3,8 @@
 
 Este jogo foi construído com HTML, CSS e Javascript puros. Conta com boa responsividade e adaptatividade, além de usar recursos audiovisuais visando enriquecer a experiência do usuário.
 
+Para visualizar o jogo, [clique aqui](https://kmkery.github.io/jogo-yu-gi-oh-jankenpo/) 🕹️
+
 ## Sobre o jogo
 
 O projeto traz o clássico jogo "Pedra, Papel e Tesoura" (Jan Ken Po) com uma roupagem do famoso anime Yu-Gi-Oh. Nele, você irá desafiar o computador para uma batalha na qual a sorte é a maior aliada.
